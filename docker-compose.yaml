@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  wedoappfinal:
+    image: wedocustomer:v1
+    build: . # location of dockerfile
+    container_name: wedocont01
+    ports:
+    - "1199:80"
+    restart: always
+    environment:
+      deploy: "app2"
